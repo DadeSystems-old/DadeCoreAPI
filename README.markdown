@@ -10,9 +10,10 @@ All requests to the API require authentication via simple access token which mus
 ### API Methods
 
 #### GET /api/receivable_accounts
-Retrieves accounts matching the provided address parameters.
+Retrieves accounts matching the provided name and address parameters.
 
 ##### Parameters
+- name
 - address_line_1
 - address_line_2 (optional)
 - city
@@ -24,21 +25,25 @@ Retrieves accounts matching the provided address parameters.
 [
   { 
     "id": 223,
+    "external_key": "7331406508",
     "address_line_1": "26315 Rohan Estates",
     "address_line_2": "Apt. 858",
-    "city": "Port Kayleighton",
+    "city": "Queens",
     "state": "New York",
     "zip": "72618-0666",
-    "full_address": "26315 Rohan Estates Apt. 858 Port Kayleighton New York 72618-0666"
-  },
-  { 
-    "id": 523,
-    "address_line_1": "74472 Kihn Creek",
-    "address_line_2": "Apt. 800",
-    "city": "Conradton",
-    "state": "Mississippi",
-    "zip": "33184",
-    "full_address": "74472 Kihn Creek Apt. 800 Conradton Mississippi 33184"
+    "full_address": "26315 Rohan Estates Apt. 858 Queens New York 72618-0666",
+    "payer": { 
+      "id": 96, 
+      "name": "Dr. Dorothy Cummerata"
+    }, 
+    "biller": {
+      "id": 2, 
+      "name": "Green Property Management" },
+    "group": {
+      "id": 4, 
+      "name": "Ice House Condos", 
+      "external_key": "0005" 
+    }
   }
 ]
 ```
