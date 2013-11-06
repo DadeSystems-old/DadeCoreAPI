@@ -36,8 +36,14 @@ function renderResults(data){
   results_list.html('');
   
   if( data.length > 0 ){
-    $.each(data, function(i, obj) {
-      results_list.append('<li class="list-group-item">'+ obj.full_address +'</li>');
+    $.each(data, function(i, account) {
+      var list_item = $('<li class="list-group-item"></li>');
+      var header = $('<h4 class="list-group-item-heading">'+ account.payer.name +'</h4>');
+      var item_text = $('<p class="list-group-item-text">'+ account.full_address +'</p>');
+      
+      list_item.append(header);
+      list_item.append(item_text);
+      results_list.append(list_item);
     });
   }
   else {
