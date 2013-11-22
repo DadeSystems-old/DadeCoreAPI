@@ -47,3 +47,26 @@ Retrieves accounts matching the provided name and address parameters.
   }
 ]
 ```
+
+#### GET /api/payers
+Retrieves payers matching the provided name and account number parameters.
+
+##### Parameters
+- name
+- account_number (optional)
+
+##### Example response
+```json
+[
+  { 
+    "id": 123,
+    "name": "John Smith",
+    "receivable_accounts": [
+      { 
+        "id":12,
+        "external_key": "481815583"
+      }
+    ]
+  }
+]
+```

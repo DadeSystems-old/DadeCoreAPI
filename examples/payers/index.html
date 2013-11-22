@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DadeCore API Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="example.js"></script>
+    <link href="../example.css" rel="stylesheet" media="screen">
+    
+    <!-- Bootstrap -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">DadeCore API</span>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="main-menu-collapse">   
+          <ul class="nav navbar-nav">
+            <li><a href="../receivable_accounts/index.html">Receivable Accounts</a></li>
+            <li class="active"><a href="../payers/index.html">Payers</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/DadeSystems/DadeCoreAPI">API Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+      
+      <div class="page-header">
+        <h1>Payers</h1>
+      </div>
+      
+      </br>
+      
+      <div class="row">
+        <div class="col-sm-4">
+        
+          <form role="form" action="http://localhost:3000/api/payers" method="GET">
+            
+            <input type="hidden" name="access_token" value="be32411b6ed1733abdce66227cbd7477">
+            
+            <div class="form-group">
+              <!-- <label for="name">Name</label> -->
+              <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+            </div>
+            
+            <div class="form-group">
+              <!-- <label for="address_line_1">Account Number</label> -->
+              <input type="text" class="form-control" name="account_number" id="account_number" placeholder="Account Number (optional)">
+            </div>
+            
+            <br>
+        
+            <button id="submit_form" type="submit" class="btn btn-success">Submit</button>
+            <button id="clear_form" type="reset" class="btn btn-default">Clear</button>
+          </form>
+        
+        </div>
+        
+        <div class="col-sm-4 col-sm-offset-1">
+          <ul id="results" class="list-group">
+          </ul>
+        </div>  
+      </div>
+      
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -32,7 +32,7 @@ $(function(){
 
 function renderResults(data){
   var results_list = $('#results');
-  
+
   results_list.html('');
   
   if( data.length > 0 ){

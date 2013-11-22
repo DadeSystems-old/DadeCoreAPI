@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="example.js"></script>
-    <link href="example.css" rel="stylesheet" media="screen">
+    <link href="../example.css" rel="stylesheet" media="screen">
     
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,17 +19,45 @@
   </head>
   <body>
     
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">DadeCore API</span>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="main-menu-collapse">   
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../receivable_accounts/index.html">Receivable Accounts</a></li>
+            <li><a href="../payers/index.html">Payers</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/DadeSystems/DadeCoreAPI">API Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     <div class="container">
-      <h1>DadeCore API Example</h1>
+      
+      <div class="page-header">
+        <h1>Receivable Accounts</h1>
+      </div>
       
       </br>
       
       <div class="row">
         <div class="col-sm-4">
         
-          <form role="form" action="" method="GET">
+          <form role="form" action="http://localhost:3000/api/receivable_accounts" method="GET">
             
-            <input type="hidden" name="access_token" value="">
+            <input type="hidden" name="access_token" value="be32411b6ed1733abdce66227cbd7477">
             
             <div class="form-group">
               <!-- <label for="name">Name</label> -->
@@ -60,7 +88,9 @@
               <!-- <label for="zip">Zip</label> -->
               <input type="text" class="form-control" name="zip" id="zip" placeholder="Zip">
             </div>
-        
+            
+            <br>
+            
             <button id="submit_form" type="submit" class="btn btn-success">Submit</button>
             <button id="clear_form" type="reset" class="btn btn-default">Clear</button>
           </form>
@@ -76,6 +106,6 @@
     </div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

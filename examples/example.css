@@ -1,3 +1,7 @@
+body { 
+  padding-top: 70px; 
+}
+
 .has-error input.form-control {
   border-color: red;
 }
@@ -10,4 +14,13 @@
 .field-error-message {
   margin-left: 15px;
   color: red;
+}
+
+#results {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+form {
+  margin-bottom: 40px;
 }
