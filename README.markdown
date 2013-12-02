@@ -10,7 +10,7 @@ All requests to the API require authentication via simple access token which mus
 ### API Methods
 
 #### GET /api/receivable_accounts
-Retrieves accounts matching the provided name and address parameters.
+Retrieves accounts matching the provided parameters.
 
 ##### Parameters
 - name
@@ -49,7 +49,7 @@ Retrieves accounts matching the provided name and address parameters.
 ```
 
 #### GET /api/payers
-Retrieves payers matching the provided name and account number parameters.
+Retrieves payers matching the provided parameters.
 
 ##### Parameters
 - name
@@ -67,6 +67,23 @@ Retrieves payers matching the provided name and account number parameters.
         "external_key": "481815583"
       }
     ]
+  }
+]
+```
+
+#### GET /api/billers
+Retrieves billers matching the provided parameters.
+
+##### Parameters
+- name
+
+##### Example response
+```json
+[
+  { 
+    "id": 12,
+    "name": "Green Property Management",
+    "external_key": "481815583"
   }
 ]
 ```

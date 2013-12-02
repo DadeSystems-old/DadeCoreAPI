@@ -33,8 +33,8 @@
         
         <div class="collapse navbar-collapse" id="main-menu-collapse">   
           <ul class="nav navbar-nav">
-            <li><a href="../billers/index.html">Billers</a></li>
-            <li class="active"><a href="../receivable_accounts/index.html">Receivable Accounts</a></li>
+            <li class="active"><a href="../billers/index.html">Billers</a></li>
+            <li><a href="../receivable_accounts/index.html">Receivable Accounts</a></li>
             <li><a href="../payers/index.html">Payers</a></li>
           </ul>
           
@@ -48,7 +48,7 @@
     <div class="container">
       
       <div class="page-header">
-        <h1>Receivable Accounts</h1>
+        <h1>Billers</h1>
       </div>
       
       </br>
@@ -56,38 +56,13 @@
       <div class="row">
         <div class="col-sm-4">
         
-          <form role="form" action="http://localhost:3000/api/receivable_accounts" method="GET">
+          <form role="form" action="http://localhost:3000/api/billers" method="GET">
             
             <input type="hidden" name="access_token" value="be32411b6ed1733abdce66227cbd7477">
             
             <div class="form-group">
               <!-- <label for="name">Name</label> -->
               <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-            </div>
-            
-            <div class="form-group">
-              <!-- <label for="address_line_1">Address Line 1</label> -->
-              <input type="text" class="form-control" name="address_line_1" id="address_line_1" placeholder="Address line 1">
-            </div>
-        
-            <div class="form-group">
-              <!-- <label for="address_line_2">Address Line 1</label> -->
-              <input type="text" class="form-control" name="address_line_2" id="address_line_2" placeholder="Address line 2 (optional)">
-            </div>
-        
-            <div class="form-group">
-              <!-- <label for="city">City</label> -->
-              <input type="text" class="form-control" name="city" id="city" placeholder="City">
-            </div>
-        
-            <div class="form-group">
-              <!-- <label for="state">State</label> -->
-              <input type="text" class="form-control" name="state" id="state" placeholder="State">
-            </div>
-        
-            <div class="form-group">
-              <!-- <label for="zip">Zip</label> -->
-              <input type="text" class="form-control" name="zip" id="zip" placeholder="Zip">
             </div>
             
             <br>
