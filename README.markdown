@@ -54,6 +54,7 @@ Retrieves payers matching the provided parameters.
 ##### Parameters
 - name
 - account_number (optional)
+- biller_id (optional)
 
 ##### Example response
 ```json
