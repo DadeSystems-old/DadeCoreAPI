@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DadeCore API - Billers</title>
+    <title>DadeCore API - Bank Accounts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="example.js"></script>
@@ -33,10 +33,10 @@
         
         <div class="collapse navbar-collapse" id="main-menu-collapse">   
           <ul class="nav navbar-nav">
-            <li class="active"><a href="../billers/index.html">Billers</a></li>
+            <li><a href="../billers/index.html">Billers</a></li>
             <li><a href="../receivable_accounts/index.html">Receivable Accounts</a></li>
             <li><a href="../payers/index.html">Payers</a></li>
-            <li><a href="../bank_accounts/index.html">Bank Accounts</a></li>
+            <li class="active"><a href="../bank_accounts/index.html">Bank Accounts</a></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
@@ -49,7 +49,7 @@
     <div class="container">
       
       <div class="page-header">
-        <h1>Billers</h1>
+        <h1>Bank Accounts</h1>
       </div>
       
       </br>
@@ -57,13 +57,13 @@
       <div class="row">
         <div class="col-sm-4">
         
-          <form role="form" action="http://localhost:3000/api/billers" method="GET">
+          <form role="form" action="http://dadecore.dev/api/bank_accounts" method="GET">
             
-            <input type="hidden" name="access_token" value="be32411b6ed1733abdce66227cbd7477">
+            <input type="hidden" name="access_token" value="595e1bf676975acba4401708c4fe315f">
             
             <div class="form-group">
               <!-- <label for="name">Name</label> -->
-              <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+              <input type="text" class="form-control" name="receivable_account_id" id="receivable_account_id" placeholder="Receivable account ID or JSON array of IDs">
             </div>
             
             <br>

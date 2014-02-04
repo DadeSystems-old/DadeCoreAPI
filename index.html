@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DadeCore API - Billers</title>
+    <title>DadeCore API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="example.js"></script>
-    <link href="../example.css" rel="stylesheet" media="screen">
+    <link href="examples/example.css" rel="stylesheet" media="screen">
     
     <!-- Bootstrap -->
-    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,10 +33,10 @@
         
         <div class="collapse navbar-collapse" id="main-menu-collapse">   
           <ul class="nav navbar-nav">
-            <li class="active"><a href="../billers/index.html">Billers</a></li>
-            <li><a href="../receivable_accounts/index.html">Receivable Accounts</a></li>
-            <li><a href="../payers/index.html">Payers</a></li>
-            <li><a href="../bank_accounts/index.html">Bank Accounts</a></li>
+            <li><a href="examples/billers/index.html">Billers</a></li>
+            <li><a href="examples/receivable_accounts/index.html">Receivable Accounts</a></li>
+            <li><a href="examples/payers/index.html">Payers</a></li>
+            <li><a href="examples/bank_accounts/index.html">Bank Accounts</a></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
@@ -49,40 +49,23 @@
     <div class="container">
       
       <div class="page-header">
-        <h1>Billers</h1>
+        <h1>Examples</h1>
       </div>
       
-      </br>
-      
       <div class="row">
-        <div class="col-sm-4">
-        
-          <form role="form" action="http://localhost:3000/api/billers" method="GET">
-            
-            <input type="hidden" name="access_token" value="be32411b6ed1733abdce66227cbd7477">
-            
-            <div class="form-group">
-              <!-- <label for="name">Name</label> -->
-              <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-            </div>
-            
-            <br>
-            
-            <button id="submit_form" type="submit" class="btn btn-success">Submit</button>
-            <button id="clear_form" type="reset" class="btn btn-default">Clear</button>
-          </form>
-        
+        <div class="col-sm-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="examples/billers/index.html">Billers</a></li>
+            <li><a href="examples/receivable_accounts/index.html">Receivable Accounts</a></li>
+            <li><a href="examples/payers/index.html">Payers</a></li>
+            <li><a href="examples/bank_accounts/index.html">Bank Accounts</a></li>
+          </ul>    
         </div>
-        
-        <div class="col-sm-4 col-sm-offset-1">
-          <ul id="results" class="list-group">
-          </ul>
-        </div>  
       </div>
       
     </div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
