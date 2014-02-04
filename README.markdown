@@ -88,3 +88,24 @@ Retrieves billers matching the provided parameters.
   }
 ]
 ```
+
+#### GET /api/bank_accounts
+Retrieves banks accounts for the provided receivable account(s).
+
+##### Parameters
+- receivable_account_id (single id or JSON array of ids, ex: `[196, 197]`)
+
+##### Example response
+```json
+[
+  { 
+    "receivable_account_id": 196,
+    "bank_account": { 
+      "id": 6,
+      "name": "Demo Account",
+      "routing_number": "444223469",
+      "account_number": "1483050006"
+    }
+  }
+]
+```
