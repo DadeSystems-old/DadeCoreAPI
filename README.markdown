@@ -113,19 +113,21 @@ Retrieves banks accounts for the provided receivable account(s).
 #### GET /api/billers/7/splits/
 Retrieves splits/payment data for the provided biller.
 
-##### Parameters
-api/billers/7/splits/?batches.batch_scope=
-&batches.batch_type=
-&payment_type=
-&validation_type=manual
-&batches.id=
-&splits.payment_id=
-&date_posted=02/22/2018 - 02/10/2018
-&payers.name=
-&receivable_accounts.external_key=
-&receivable_accounts.account_type=
-&receivable_accounts.external_code=
-&checks.check_num=
+##### GET URL Parameters
+```
+api/billers/7/splits/?batches.batch_scope=    
+&batches.batch_type=    
+&payment_type=    
+&validation_type=manual    
+&batches.id=    
+&splits.payment_id=    
+&date_posted=02/22/2018 - 02/10/2018    
+&payers.name=    
+&receivable_accounts.external_key=    
+&receivable_accounts.account_type=    
+&receivable_accounts.external_code=    
+&checks.check_num=    
+```
 
 ##### Example response
 ```json
