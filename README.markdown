@@ -108,4 +108,60 @@ Retrieves banks accounts for the provided receivable account(s).
     }
   }
 ]
+
+#### GET /api/billers/7/splits/
+Retrieves splits/payment data for the provided biller.
+
+##### Parameters
+api/billers/7/splits/?batches.batch_scope=
+&batches.batch_type=
+&payment_type=
+&validation_type=manual
+&batches.id=
+&splits.payment_id=
+&date_posted=02/22/2018 - 02/10/2018
+&payers.name=
+&receivable_accounts.external_key=
+&receivable_accounts.account_type=
+&receivable_accounts.external_code=
+&checks.check_num=
+
+##### Example response
+```json
+{
+    "splits": [
+        {
+            "payment_id": 83,
+            "amount": "174.78",
+            "receivable_account": {
+                "external_key": "67843",
+                "external_code": "0",
+                "account_type": "Default"
+            },
+            "post": {
+                "date_posted": "2018-01-31T22:31:22.496Z"
+            },
+            "checks": [
+                {
+                    "id": 87,
+                    "check_num": "70"
+                }
+            ],
+            "batch": {
+                "id": 9
+            },
+            "payer": {
+                "id": 880,
+                "name": "Miami Dade County",
+                "alternate_name": null
+            }
+        }
+    ],
+    "meta": {
+        "total": 1,
+        "page_length": 1,
+        "next_page": null,
+        "previous_page": null
+    }
+}
 ```
