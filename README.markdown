@@ -108,6 +108,7 @@ Retrieves banks accounts for the provided receivable account(s).
     }
   }
 ]
+```
 
 #### GET /api/billers/7/splits/
 Retrieves splits/payment data for the provided biller.
